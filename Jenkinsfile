@@ -9,7 +9,7 @@ pipeline {
         // DOCKER_IMAGE_TAG = 'keer:latest' // Update with your desired image name and tag
         DOCKER_IMAGE_NAME = 'deploy'
         // DOCKER_IMAGE_TAG = 'latest'
-        REGISTRY_IMAGE = "docker.io/nidhikyn12/deploy:${BUILD_NUMBER}"
+        REGISTRY_IMAGE = "docker.io/nidhikyn12/pyto:${BUILD_NUMBER}"
         SONAR_PROJECT_KEY = 'Pyto-pipe'
         DOCKER_REGISTRY = 'https://hub.docker.com/repository/docker/nidhikyn12/pyto'
         registryCredential = 'Docker_creds'
@@ -46,7 +46,7 @@ pipeline {
             steps {
                 script {
                     // Build Docker image using Docker Pipeline plugin
-                    docker.withRegistry( 'https://docker.io', "${registryCredential}") {
+                    docker.withRegistry( 'https://docker.io', registryCredential) {
                      // Tag the Docker image
                     bat "docker tag ${DOCKER_IMAGE_NAME} ${REGISTRY_IMAGE}"
                     // dockerImage.push()
