@@ -7,7 +7,7 @@ pipeline {
        
         // DOCKERFILE_PATH = 'C:\\Users\\Nidhi\\new-demo-jenkins\\Dockerfile' // Update this with your Dockerfile path
         // DOCKER_IMAGE_TAG = 'keer:latest' // Update with your desired image name and tag
-        DOCKER_IMAGE_NAME = 'deploy:v1'
+        DOCKER_IMAGE_NAME = 'deploy'
         // DOCKER_IMAGE_TAG = 'latest'
         REGISTRY_IMAGE = "docker.io/nidhikyn12/deploy:v1"
         SONAR_PROJECT_KEY = 'Pyto-pipe'
@@ -16,18 +16,18 @@ pipeline {
      
     }
  
-    stages {
-        stage('SonarQube Scan') {
-            steps {
-                script{
-                    // def props = readProperties file: 'sonar-project.properties'
-                    withSonarQubeEnv('sonar') {
-                        bat "${SCANNER_HOME}/bin/sonar-scanner -Dsonar.projectKey=${SONAR_PROJECT_KEY}"
+    // stages {
+    //     stage('SonarQube Scan') {
+    //         steps {
+    //             script{
+    //                 // def props = readProperties file: 'sonar-project.properties'
+    //                 withSonarQubeEnv('sonar') {
+    //                     bat "${SCANNER_HOME}/bin/sonar-scanner -Dsonar.projectKey=${SONAR_PROJECT_KEY}"
  
-                    }
-                }
-            }
-        }
+    //                 }
+    //             }
+    //         }
+    //     }
         stage('Build Docker Image') {
             steps {
                 script {
