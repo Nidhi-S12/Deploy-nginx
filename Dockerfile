@@ -1,4 +1,4 @@
 FROM python:3.12.4-bookworm
 workdir /pipe
-COPY ..
+COPY . /pipe
 CMD ["python","pipe.py"]
