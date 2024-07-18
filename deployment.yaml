@@ -10,10 +10,10 @@ spec:
   template:
     metadata:
       labels:
-        app: myapp
+        app: yna-app
     spec:
       containers:
-      - name: myapp
+      - name: yna-app
         image: nidhikyn12/pyto:23
         ports:
         - containerPort: 8080
