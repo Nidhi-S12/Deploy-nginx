@@ -16,4 +16,4 @@ spec:
       - name: yna-app
         image: nidhikyn12/pyto:23
         ports:
-        - containerPort: 8081
+        - containerPort: 8080
