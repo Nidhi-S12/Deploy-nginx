@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/Nidhi-S12/Python-demo
     targetRevision: HEAD
-    path: dev
+    path: /
   destination: 
     server: https://kubernetes.default.svc
     namespace: yna
