@@ -7,11 +7,11 @@ pipeline {
        
         // DOCKERFILE_PATH = 'C:\\Users\\Nidhi\\new-demo-jenkins\\Dockerfile' // Update this with your Dockerfile path
         // DOCKER_IMAGE_TAG = 'keer:latest' // Update with your desired image name and tag
-        DOCKER_IMAGE_NAME = 'deploy'
+        DOCKER_IMAGE_NAME = 'deploy-ng'
         // DOCKER_IMAGE_TAG = 'latest'
-        REGISTRY_IMAGE = "docker.io/nidhikyn12/pyto:${BUILD_NUMBER}"
-        SONAR_PROJECT_KEY = 'Pyto-pipe'
-        DOCKER_REGISTRY = 'https://hub.docker.com/repository/docker/nidhikyn12/pyto'
+        REGISTRY_IMAGE = "docker.io/nidhikyn12/deploy-nginx:${BUILD_NUMBER}"
+        SONAR_PROJECT_KEY = 'Nginx-pipe'
+        DOCKER_REGISTRY = 'https://hub.docker.com/repository/docker/nidhikyn12/deploy-nginx'
         registryCredential = 'Docker_creds'
      
     }

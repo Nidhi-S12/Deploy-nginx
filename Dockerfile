@@ -1,4 +1,4 @@
-FROM python:3.12.4-bookworm
-workdir /pipe
-COPY . /pipe
-CMD ["python","pipe.py"]
+FROM nginx:alpine
+ 
+COPY usr.conf /etc/nginx/conf.d/
+COPY index.html /usr/share/nginx/html/
