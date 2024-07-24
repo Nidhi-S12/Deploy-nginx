@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/Nidhi-S12/Deploy-nginx
+    repoURL: https://github.com/Nidhi-S12/Deploy-nginx.git
     targetRevision: HEAD
     path: .
   destination: 
