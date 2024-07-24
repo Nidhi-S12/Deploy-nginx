@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: yna-argo-application
+  name: nginx-argo-application
   namespace: argocd
 spec:
   project: default
 
   source:
-    repoURL: https://github.com/Nidhi-S12/Python-demo
+    repoURL: https://github.com/Nidhi-S12/Deploy-nginx
     targetRevision: HEAD
     path: .
   destination: 
     server: https://kubernetes.default.svc
-    namespace: yna
+    namespace: nginx
 
   syncPolicy:
     syncOptions:

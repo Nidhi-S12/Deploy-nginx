@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: yna-app
+  name: nginx-app
 spec:
   selector:
     matchLabels:
-      app: yna-app
+      app: nginx-app
   replicas: 4
   template:
     metadata:
       labels:
-        app: yna-app
+        app: nginx-app
     spec:
       containers:
-      - name: yna-app
-        image: nidhikyn12/pyto:23
+      - name: nginx-app
+        image: nidhikyn12/
         command: ['sh', '-c', 'echo hey there && sleep 3600']
         ports:
         - containerPort: 8080
